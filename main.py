@@ -1,21 +1,31 @@
-color1 = input()
-color2 = input()
+a1 = int(input())
+b1 = int(input())
+a2 = int(input())
+b2 = int(input())
 
-red = 'красный'
-blue = 'синий'
-yellow = 'желтый'
+# a1 < b1, a2 < b2
 
-if (color1 == red and color2 == blue) or (color2 == red and color1 == blue):
-    print('фиолетовый')
-elif (color1 == red and color2 == yellow) or (color2 == red and color1 == yellow):
-    print('оранжевый')
-elif (color1 == blue and color2 == yellow) or (color2 == blue and color1 == yellow):
-    print('зеленый')
-elif color1 == color2 == red:
-    print(red)
-elif color1 == color2 == blue:
-    print(blue)
-elif color1 == color2 == yellow:
-    print(yellow)      
+if a1 < a2 < b1 < b2:
+    print(a2, b1)
+elif a1 < a2 < b2 < b1:
+    print(a2, b2)
+elif a2 < a1 < b2 < b1:
+    print(a1, b2)
+elif a2 < a1 < b1 < b2:
+    print(a1, b1)   
+elif a1 == a2:
+    if b1 < b2:
+        print(a1, b1)
+    else:
+        print(a1,b2)
+elif b1 == b2:
+    if a1 < a2:
+        print(a2, b1)
+    else:
+        print(a1, b1)
+elif a2 == b1:
+    print(a2)
+elif a1 == b2:
+    print(a1)
 else:
-    print('ошибка цвета')
+    print('пустое множество')
