@@ -1,7 +1,6 @@
-x = int(input())
+str = 'Какой сегодня день недели?'
 
-a = x // 100 
-b = x // 10 % 10
-c = x % 10
-
-print(a, b, c)
+if 'суббота' in str or 'воскресенье' in str:
+    print('YES')
+else:
+    print('NO')
