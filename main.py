@@ -1,6 +1,8 @@
-str = 'Какой сегодня день недели?'
+n = int(input())
+d = 0
 
-if 'суббота' in str or 'воскресенье' in str:
-    print('YES')
-else:
-    print('NO')
+for i in range(n):
+  k = int(input())
+  d += k
+  
+print(n + d)
