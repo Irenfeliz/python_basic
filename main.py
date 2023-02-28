@@ -1,8 +1,10 @@
+from math import *
+
 n = int(input())
-d = 0
+k = 0
 
 for i in range(n):
-  k = int(input())
-  d += k
-  
-print(n + d)
+    k += 1 / (i + 1)
+    j = k - log(n)
+
+print(j)
